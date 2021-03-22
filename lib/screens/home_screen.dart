@@ -6,6 +6,7 @@ import '../data/data.dart';
 import '../models/restaurant.dart';
 import '../models/restaurant.dart';
 import '../widgets/rating_stars.dart';
+import 'cart_screen.dart';
 import 'restaurant_screen.dart';
 import 'restaurant_screen.dart';
 
@@ -39,12 +40,15 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(children: <Widget> [
               ClipRRect(
                 borderRadius: BorderRadius.circular(15.0),
-                child: Image(
-                  height: 150.0,
-                  width: 150.0,
-                  image: AssetImage(restaurant.imageUrl),
-                  fit: BoxFit.cover,
-                  ),
+                child: Hero(
+                  tag: restaurant.imageUrl,
+                  child: Image(
+                    height: 150.0,
+                    width: 150.0,
+                    image: AssetImage(restaurant.imageUrl),
+                    fit: BoxFit.cover,
+                    ),
+                ),
                 ),
                 Container(
                   margin: EdgeInsets.all(12.0),
@@ -102,11 +106,18 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(color: Color(0xffffeb3b)),
         ),
         actions: <Widget>[
-          TextButton(child: Text('Cart (${currentUser.cart.length})',
+          FlatButton(
+            child: Text(
+              'Cart (${currentUser.cart.length})',
             style: TextStyle(color: Colors.yellow,
-                fontSize: 20.0),
+                fontSize: 20.0,
+            ),
           ),
-            onPressed: () {},
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => CartScreen(),
+              ),
+            ),
           ),
         ],
       ),
