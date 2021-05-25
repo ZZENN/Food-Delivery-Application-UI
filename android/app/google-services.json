@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "760113983522",
+    "project_id": "dash-delivery-8734f",
+    "storage_bucket": "dash-delivery-8734f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760113983522:android:98c37a8575eaf81c40da7b",
+        "android_client_info": {
+          "package_name": "com.example.dashdelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760113983522-n260jrcdeg8nkja9ub2tp0tsd07kq1vb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuMsP3z83LJ_BW2-dnOZ7n_odhmjIwExI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760113983522-n260jrcdeg8nkja9ub2tp0tsd07kq1vb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "760113983522-32sn989erad4ua8011vjiu61ckmrje76.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dashdelivery"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

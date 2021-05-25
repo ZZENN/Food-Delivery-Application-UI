@@ -14,4 +14,16 @@ class Restaurant {
     this.rating,
     this.menu,
   });
+
+  factory Restaurant.fromJson(Map<String, dynamic> json) => Restaurant(
+        imageUrl: json['imageUrl'],
+        name: json['name'],
+        address: json['address'],
+      );
+
+  Map<String, dynamic> toJson() => {
+        'imageUrl': imageUrl,
+        'name': name,
+        'address': address,
+      };
 }
